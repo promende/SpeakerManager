@@ -1,14 +1,15 @@
 ﻿#include <iostream>
 using namespace std;
-#include "speechManager.h"
+#include "SpeakerManager.h"
 #include<string>
 #include <ctime>
+#include <vector>
 int main()
 {
 	//随机数种子
 	srand((unsigned int)time(NULL));
 	//创建管理类对象
-	SpeechManager sm;
+	SpeakerManager sm;
 
 	//测试12名选手创建
 	//for (map<int, Speaker>::iterator it = sm.m_Speaker.begin(); it != sm.m_Speaker.end(); it++)

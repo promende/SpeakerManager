@@ -148,10 +148,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="SpeechManager.cpp" />
+    <ClCompile Include="SpeakerManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SpeechManager.h" />
+    <ClInclude Include="SpeakerManager.h" />
     <ClInclude Include="Speaker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

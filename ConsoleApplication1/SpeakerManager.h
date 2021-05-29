@@ -1,6 +1,8 @@
 #pragma once 
+#ifndef _SPEAKERMANAGER_
+#define _SPEAKERMANAGER_
+
 #include <iostream>
-using namespace std;
 #include <vector>
 #include <map>
 #include "speaker.h"
@@ -11,14 +13,11 @@ using namespace std;
 #include <string>
 #include <fstream>
 
-
 //设计演讲管理类
-class SpeechManager
-{
+class SpeakerManager{
 public:
-
 	//构造函数
-	SpeechManager();
+	SpeakerManager();
 
 	//菜单功能
 	void show_Menu();
@@ -27,7 +26,7 @@ public:
 	void exitSystem();
 
 	//析构函数
-	~SpeechManager();
+	~SpeakerManager();
 
 	//初始化容器和属性
 	void initSpeech();
@@ -64,22 +63,24 @@ public:
 	bool fileIsEmpty;
 
 	//存放往届记录的容器
-	map<int, vector<string>>m_Record;
+	std::map<int, std::vector<std::string>>m_Record;
 
 	//成员属性
 	//保存第一轮比赛选手编号容器
-	vector<int>v1;
+	std::vector<int>v1;
 
 	//第一轮晋级选手编号容器
-	vector<int>v2;
+	std::vector<int>v2;
 
 	//胜出前三名选手编号容器
-	vector<int>vVictory;
+	std::vector<int>vVictory;
 
 	//存放编号以及对应具体选手容器
-	map<int, Speaker>m_Speaker;
+	std::map<int, Speaker>m_Speaker;
 
 	//存放比赛轮数 
 	int m_Index;
 
 };
+
+#endif
