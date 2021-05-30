@@ -1,52 +1,40 @@
-﻿#include <iostream>
-using namespace std;
-#include "SpeakerManager.h"
-#include<string>
+﻿#include "SpeakerManager.h"
+
 #include <ctime>
 #include <vector>
-int main()
-{
-	//随机数种子
-	srand((unsigned int)time(NULL));
-	//创建管理类对象
-	SpeakerManager sm;
+#include <string>
+#include <iostream>
+int main(){
+	srand((unsigned int)time(NULL));//随机数种子
+	SpeakerManager manager;			//创建管理类对象
 
-	//测试12名选手创建
-	//for (map<int, Speaker>::iterator it = sm.m_Speaker.begin(); it != sm.m_Speaker.end(); it++)
-	//{
-	//	cout << "选手编号： " << it->first << " 姓名： " << it->second.m_Name << " 分数： " << it->second.m_Score[0] << endl;
-	//}
+	int choice = 0;					//用于存储用户输入
+	while (true) {
+		manager.show_Menu();
 
-	int choice = 0; //用于存储用户输入
+		std::cout << "请输入您的选择： " << std::endl;
+		std::cin >> choice;
 
-	while (true)
-	{
-		sm.show_Menu();
-
-		cout << "请输入您的选择： " << endl;
-		cin >> choice;
-
-		switch (choice)
-		{
+		switch (choice) {
 		case 1: // 开始比赛
-			sm.startSpeech();
+			manager.startSpeaker();
 			break;
 		case 2: //查看往届比赛记录
-			sm.showRecord();
+			manager.showRecord();
 			break;
 		case 3:  //清空比赛记录
-			sm.clearRecord();
+			manager.clearRecord();
 			break;
 		case 0:  //退出系统
-			sm.exitSystem();
+			manager.exitSystem();
 			break;
 		default:
-			system("cls"); // 清屏
+			system("cls");
 			break;
 		}
 	}
 
-
 	system("pause");
+
 	return 0;
 }

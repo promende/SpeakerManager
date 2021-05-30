@@ -21,6 +21,9 @@
     <ClCompile Include="SpeakerManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Speaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Speaker.h">
